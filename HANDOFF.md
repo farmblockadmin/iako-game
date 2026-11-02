@@ -138,6 +138,10 @@ Cập nhật 02/11/2026. Đã xong: ghi công (`.credit`), dọn `buildRustyGate
 
 Artifact không phục vụ `.glb`, nên mọi model đi dạng JSON base64. Khi publish: trang chính = `index.html`; kèm `assets/**` và `img/**` trong `files` (đường dẫn tương đối, giữ nguyên). Artifact hiện tại đã có sẵn toàn bộ asset — chỉ cần gửi lại `index.html` và file asset nào thay đổi.
 
+## 11b. Bản chơi công khai (GitHub Pages)
+
+Mã nguồn ở repo private `farmblockadmin/iako-game`. Trang chơi ở repo public riêng `farmblockadmin/vuon-ia-ko` (https://farmblockadmin.github.io/vuon-ia-ko/), chỉ chứa bản build. Cập nhật: `python build.py`, rồi trong thư mục `site/` (git riêng, đã bỏ qua ở repo mã nguồn) commit và push. Commit public đứng tên `farmblockadmin`, không ghi Claude.
+
 ## 12. Bản quyền asset
 
 Model Sketchfab đều **CC BY 4.0** (phải ghi công, cho thương mại): Ford Ranger (Asadawut.Kaewma), Rusty Entrance Gate (jimbogies), farmer animation (kyebaker), Pick Fruit (Natasha_Nabilah; AishahNajhanP156397), Low-Poly Construction workers (Jungle Jim), Talking Male Character (LasquetiSpice), Business Man (manoeldarochadeoliveira), Gracy Lee (hong227), Security Camera (andrea.chierchia), Water Motor Pump (topfrank2013), Low-Poly Lamp Post (Memorie), Asian Conical Hat (MushyDay). Texture đất/cỏ: Poly Haven (CC0). Động tác Mixamo: miễn phí bản quyền cho dự án. Dữ liệu cao độ: AWS Terrain Tiles (nguồn mở, ghi nguồn SRTM/Copernicus).

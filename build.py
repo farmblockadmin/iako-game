@@ -15,4 +15,7 @@ for d in ['assets','img']:
         except OSError: shutil.copytree(B+d,p)
 if not os.path.exists(B+'dev/three.module.js'):
     shutil.copy(B+'vendor/three.module.js',B+'dev/three.module.js');shutil.copytree(B+'vendor/jsm',B+'dev/jsm')
+site='<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+page+'</body></html>'
+os.makedirs(B+'site',exist_ok=True);open(B+'site/index.html','w',encoding='utf-8').write(site);open(B+'site/.nojekyll','w').close()
+for d in ['assets','img']: shutil.copytree(B+d,B+'site/'+d,dirs_exist_ok=True)
 print('index.html',len(page))

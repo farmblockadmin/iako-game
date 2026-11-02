@@ -15,11 +15,11 @@ function setSt(s){body.dataset.st=s;G.st=s}
 /* ---------- trạng thái trò chơi ---------- */
 const G={st:'intro',introT:0,view:null,hour:6.1,visited:[],next:0,stopT:0,rigW:0,rigK:null,rigT:0,titleT:0,titleK:null,playT:0,pauseA:0,pf:0,pfT:0,endT:0,free:false};
 const ST=[
- {k:'gate',n:'Cổng vào',tag:'Trạm 1/5 · Cổng vào',h:'Chào mừng đến <em>Ia Ko 1</em>',sub:'Vườn cà phê xen cau Farmblock ở Gia Lai. Lái theo vạch vàng để đi hết 5 trạm.',f:[['22 ha','diện tích'],['8','khu canh tác'],['35','thiết bị IoT']],hour:7.0},
+ {k:'gate',n:'Cổng vào',tag:'Trạm 1/5 · Cổng vào',h:'Chào mừng đến <em>Ia Ko 1</em>',sub:'Vườn cà phê xen cau Farmblock ở Gia Lai. Lái theo vạch vàng để đi hết 5 trạm.',f:[['22 ha','diện tích'],['8','khu canh tác'],['35','thiết bị theo thiết kế']],hour:7.0},
  {k:'over',n:'Toàn vườn',tag:'Trạm 2/5 · Toàn vườn',h:'8 khu, <em>một bản đồ</em>',sub:'Mỗi khu có mã riêng và được theo dõi tới từng hàng cây. Bấm nút tròn để bay lên xem toàn cảnh.',f:[['A–H','8 khu'],['3 × 1,5 m','hàng × cây']],hour:7.8},
  {k:'rows',n:'Hàng cà phê',tag:'Trạm 3/5 · Hàng cà phê',h:'Cà phê xen cau, <em>tưới tận gốc</em>',sub:'Robusta hàng cách hàng 3 m, cau làm đai chắn gió. Béc tưới đặt sát gốc từng cây, nước đi đúng chỗ rễ cần.',f:[['4','nông dân'],['12 m','lưới béc tưới']],hour:8.7},
  {k:'hq',n:'Trung tâm vườn',tag:'Trạm 4/5 · Trung tâm vườn',h:'Nhà điều hành <em>& hồ trữ nước</em>',sub:'Mái pin mặt trời, hồ lót HDPE có hàng rào an toàn, đội giám sát và kỹ sư trực tại vườn.',f:[['2','giám sát'],['4','kỹ sư']],hour:10.0},
- {k:'dev',n:'Giám sát 24/7',tag:'Trạm 5/5 · Giám sát 24/7',h:'Dữ liệu chảy về <em>trạm IoT trung tâm</em>',sub:'22 camera, 9 cảm biến đất, 2 cảm biến nước và trạm thời tiết gửi số liệu liên tục, kể cả ban đêm.',f:[['22','camera'],['9','cảm biến đất'],['24/7','giám sát']],hour:19.6},
+ {k:'dev',n:'Trạm IoT',tag:'Trạm 5/5 · Trạm IoT',h:'Dữ liệu chảy về <em>trạm IoT trung tâm</em>',sub:'22 vị trí camera, đang lắp dần. 9 điểm đo đất theo thiết kế, 2 điểm đo nước và trạm thời tiết gửi số liệu về trung tâm.',f:[['22','vị trí camera'],['9','điểm đo đất'],['2','điểm đo nước']],hour:19.6},
  {k:'end',n:'Cổng ra',tag:'Ra về',h:'',sub:'',f:[],hour:19.8}
 ];
 const STP=[];// vị trí trạm
@@ -191,7 +191,7 @@ const ENV={...ENV0};
 
 /* ---------- nhãn ---------- */
 const pinBox=$('#pins');
-const HUBL=(()=>{const b=document.createElement('div');b.className='hub';b.innerHTML='<span class="tag">Farmblock IoT</span><b>Trạm IoT trung tâm</b><small>Nhận dữ liệu từ 35 thiết bị trong vườn</small>';pinBox.appendChild(b);return{el:b,v:new THREE.Vector3()}})();
+const HUBL=(()=>{const b=document.createElement('div');b.className='hub';b.innerHTML='<span class="tag">Farmblock IoT</span><b>Trạm IoT trung tâm</b><small>Thiết kế cho 35 thiết bị trong vườn</small>';pinBox.appendChild(b);return{el:b,v:new THREE.Vector3()}})();
 const ZPINS=ZD.slice(0,8).map((z,i)=>{const w=toW(z.lab);const b=document.createElement('div');b.className='zp';b.innerHTML=`<b>${z.id}</b><small>Khu</small>`;pinBox.appendChild(b);return{el:b,v:new THREE.Vector3(w[0],H(w[0],w[1])+1.6,w[1])}});
 const HQPINS=[['Nhà điều hành',HQ,.62],['Hồ trữ nước',PONDW,.12],['Trạm thời tiết',W2([300,462]),.66]].map(a=>{const b=document.createElement('div');b.className='hp';b.textContent=a[0];pinBox.appendChild(b);return{el:b,v:new THREE.Vector3(a[1][0],a[1][1]+a[2],a[1][2])}});
 let RPINS=[];

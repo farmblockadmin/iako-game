@@ -1,0 +1,8 @@
+<!doctype html><html><body><script type="importmap">{"imports":{"three":"./three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';import {FBXLoader} from './jsm/loaders/FBXLoader.js';
+window.THREE=THREE;window.FBX=new FBXLoader();
+window.loadF=n=>new Promise((res,rej)=>window.FBX.load('mxin/'+n+'.fbx',res,undefined,rej));
+window.info=async n=>{const o=await loadF(n);const r={meshes:[],bones:0,anims:o.animations.map(a=>[a.name,a.duration,a.tracks.length])};o.traverse(c=>{if(c.isBone)r.bones++;if(c.isMesh){const m=Array.isArray(c.material)?c.material:[c.material];r.meshes.push([c.name,c.isSkinnedMesh,c.geometry.attributes.position.count,c.geometry.index?c.geometry.index.count:0,m.map(x=>[x.name,x.type,x.map&&x.map.image&&[x.map.image.width,x.map.image.height],!!x.normalMap,!!x.specularMap])])}});const b=new THREE.Box3().setFromObject(o);r.box=[b.min.toArray(),b.max.toArray()];return r};
+const s=document.createElement("script");s.src="mxexp.js";s.onload=()=>window.__ok=1;document.head.appendChild(s);
+</script></body></html>

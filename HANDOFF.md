@@ -11,9 +11,9 @@ Người xem lái xe bán tải bằng **WASD** theo vạch vàng qua 5 trạm:
 
 1. Cổng vào · 2. Toàn vườn · 3. Hàng cà phê · 4. Hồ & nhà điều hành · 5. Trạm IoT trung tâm (đêm) → qua cổng ra là kết thúc.
 
-- Bản đang chạy: artifact claude.ai `https://claude.ai/artifact/2LJ6ijfWoJW3WXt8i8YYGc` (bản 8). Sếp của chủ dự án đang duyệt.
+- Bản đang chạy: https://farmblockadmin.github.io/vuon-ia-ko/ (xem §11). Artifact claude.ai cũ đã xoá ngày 02/11/2026.
 - Điện thoại: chỉ hiện màn "Mở trên máy tính" (bản mobile đã bỏ).
-- Tên hiển thị trong game: **"Ia Ko 1"** (hai chữ); mã `iako-01` giữ nguyên. Bản sửa trong thư mục này chưa publish lên artifact.
+- Tên hiển thị trong game: **"Ia Ko 1"** (hai chữ); mã `iako-01` giữ nguyên.
 
 ## 2. Quy tắc bắt buộc (chủ dự án đã chốt)
 
@@ -134,13 +134,13 @@ Cập nhật 02/11/2026. Đã xong: ghi công (`.credit`), dọn `buildRustyGate
 3. Nếu sếp muốn địa hình chi tiết hơn: thay `dem.json` bằng DSM drone (§6).
 4. Code chết còn sót, chưa xoá: `treeGeo`, `buildClouds`, `buildBase`, `packet`, `buildSprinklers`, `buildLeaves`, `blobTex`, `_unused` (tên chỉ xuất hiện đúng một lần trong `src/*.js`).
 
-## 11. Publish lên artifact claude.ai
+## 11. Quy trình phát hành
 
-Artifact không phục vụ `.glb`, nên mọi model đi dạng JSON base64. Khi publish: trang chính = `index.html`; kèm `assets/**` và `img/**` trong `files` (đường dẫn tương đối, giữ nguyên). Artifact hiện tại đã có sẵn toàn bộ asset — chỉ cần gửi lại `index.html` và file asset nào thay đổi.
+Sửa xong: `python build.py`, mở bản local cho chủ dự án kiểm tra. Chủ dự án báo ok thì push lên GitHub (§11b), chưa ok thì không push. Không dùng artifact nữa; model vẫn để dạng JSON base64 như cũ.
 
 ## 11b. Bản chơi công khai (GitHub Pages)
 
-Mã nguồn ở repo private `farmblockadmin/iako-game`. Trang chơi ở repo public riêng `farmblockadmin/vuon-ia-ko` (https://farmblockadmin.github.io/vuon-ia-ko/), chỉ chứa bản build. Cập nhật: `python build.py`, rồi trong thư mục `site/` (git riêng, đã bỏ qua ở repo mã nguồn) commit và push. Commit public đứng tên `farmblockadmin`, không ghi Claude.
+Mã nguồn ở repo private `farmblockadmin/iako-game`. Trang chơi ở repo public riêng `farmblockadmin/vuon-ia-ko` (https://farmblockadmin.github.io/vuon-ia-ko/), chỉ chứa bản build. Cập nhật: `python build.py`, rồi trong thư mục `site/` (git riêng, đã bỏ qua ở repo mã nguồn) commit và push. Commit public đứng tên `farmblockadmin`, không ghi Claude. Ảnh preview khi gửi link (Telegram, Facebook…) là `img/og.jpg`, thẻ Open Graph nằm trong `build.py`.
 
 ## 12. Bản quyền asset
 

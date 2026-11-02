@@ -15,7 +15,10 @@ for d in ['assets','img']:
         except OSError: shutil.copytree(B+d,p)
 if not os.path.exists(B+'dev/three.module.js'):
     shutil.copy(B+'vendor/three.module.js',B+'dev/three.module.js');shutil.copytree(B+'vendor/jsm',B+'dev/jsm')
-site='<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+page+'</body></html>'
+URL='https://farmblockadmin.github.io/vuon-ia-ko/'
+TT='Vườn Ia Ko 1 · Farmblock';DS='Lái xe qua vườn cà phê xen cau Farmblock Ia Ko 1 ở Gia Lai. Mở trên máy tính để trải nghiệm 3D.'
+og=f'<meta property="og:type" content="website"><meta property="og:site_name" content="Farmblock"><meta property="og:locale" content="vi_VN"><meta property="og:url" content="{URL}"><meta property="og:title" content="{TT}"><meta property="og:description" content="{DS}"><meta property="og:image" content="{URL}img/og.jpg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1600"><meta property="og:image:height" content="840"><meta name="twitter:card" content="summary_large_image">'
+site='<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'+og+'</head><body>'+page+'</body></html>'
 os.makedirs(B+'site',exist_ok=True);open(B+'site/index.html','w',encoding='utf-8').write(site);open(B+'site/.nojekyll','w').close()
 for d in ['assets','img']: shutil.copytree(B+d,B+'site/'+d,dirs_exist_ok=True)
 print('index.html',len(page))

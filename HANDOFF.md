@@ -24,8 +24,7 @@ Người xem lái xe bán tải bằng **WASD** theo vạch vàng qua 5 trạm:
 - Số liệu đưa ra ngoài chỉ lấy từ **Dashboard iako-01** hoặc bản chuẩn trong `00_CORE` (Drive). Không có nguồn thì ghi `[Chưa kiểm]`. **Chưa đưa số pH** ra ngoài (đang chờ đội kỹ thuật kiểm).
 - Văn bản cho cơ quan nhà nước/khuyến nông/báo chí: chỉ nói vận hành, kỹ thuật, dữ liệu. Không nêu mô hình bán đất, đơn vị phân phối, nhà đầu tư.
 - Ngôn ngữ thiết kế FarmBlock: font **Archivo**, xanh đậm `#0C1F10 / #112615 / #17331C`, lime `#B5E383`, kem `#F5E4A1`, logo + wordmark có sẵn trong `page.html` (`#mk`, `.top .wm`).
-- **Chỉ dùng màu thương hiệu (chốt 03/11/2026):** không tự chế nâu, cam, đỏ gạch, vàng cho giao diện, không làm thanh ngang màu dày ở đáy. Màu đất đỏ trong mô hình 3D thì giữ. Trước khi thiết kế phải gọi skill thiết kế, trước khi giao phải soát màu. Chi tiết: `C:\Users\PC\hoc-tap\du-an\chung\chuan-thiet-ke-farmblock.md`.
-- **Còn lệch chuẩn màu, chưa sửa vì chủ dự án chưa bảo:** kem `--cream #F5E4A1` (8 chỗ trong `page.html`, không có trong bảng chuẩn), và `#FFC768 #FFD86A #FFB847 #FFEB99 #7ED8C8 #73DBFF #7ED839 #0F5280 #61BD66` ở Lớp dữ liệu, thanh tải, dấu xe trên bản đồ.
+- **Phải trông cao cấp, đáng tin, không trẻ con (chốt 03/11/2026):** được tự sáng tạo màu nếu đẹp, khớp và hợp lý với dự án; tránh khối màu bão hoà lớn, thanh ngang màu dày, nút to màu chói, nhiều màu nhấn cùng lúc. Không bold tràn lan. Màu đang có trong game không tự sửa, chỉ sửa khi chủ dự án bảo. Trước khi thiết kế gọi skill thiết kế, trước khi giao soát lại ảnh chụp. Chi tiết: `C:\Users\PC\hoc-tap\du-an\chung\chuan-thiet-ke-farmblock.md`.
 - Trước khi tải file về máy chủ dự án: nói tên + dung lượng (riêng Sketchfab/Mixamo đã cho phép tải luôn).
 - File làm ra cho chủ dự án: lưu vào `D:\Claude` trên máy họ (nếu máy có thư mục đó), đồng thời gửi trong chat.
 

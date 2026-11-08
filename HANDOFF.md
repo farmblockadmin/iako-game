@@ -1,5 +1,7 @@
 # FarmBlock · Game lái xe Vườn Iako 1 — bàn giao cho Claude Code
 
+> **Trạng thái: hoàn thiện 09/11/2026.** Tạm dừng ở bản hiện tại, không làm thêm khi chưa được bảo.
+
 > Tài liệu này để mở trong Claude Code và làm tiếp. Đọc hết trước khi sửa code.
 > Ngôn ngữ làm việc với chủ dự án: **tiếng Việt, ngắn gọn**. Thuật ngữ tiếng Anh chỉ khi phổ biến.
 
